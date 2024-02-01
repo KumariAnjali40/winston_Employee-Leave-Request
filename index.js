@@ -36,6 +36,7 @@ app.use(expressWinston.logger({
     format:format.combine(
         format.colorize(),
         format.json(),
+        format.timestamp(),
         format.prettyPrint(),
     ),
     msg:"HTTP {{req.method}} {{req.url}}",
