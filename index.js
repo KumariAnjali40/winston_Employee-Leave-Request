@@ -11,16 +11,21 @@ app.use(express.json());
 
 app.use(expressWinston.logger({
     transports:[
+        //for console.
         // new transports.Console({
         //     json:true,
         //     colorize:true,
         //     level:"error"
         // })
+
+        //for file.
         // new transports.File({
         //     json:true,
         //     level:"silly",
         //     filename:"warnninglogs.log"
         // })
+
+        //for mongodb
         new transports.MongoDB({
             json: true,
             level: "silly",
