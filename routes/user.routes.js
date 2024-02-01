@@ -15,10 +15,15 @@ router.get('/', async (req, res) => {
 // Create a new employee
 router.post('/', async (req, res) => {
   const { name } = req.body;
+//   console.log(name);
   try {
+    if(name){
     const newEmployee = new Employee({ name });
     await newEmployee.save();
     res.json(newEmployee);
+    }else{
+        res.status(500).json({ error: error.message });
+    }
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

@@ -1,0 +1,78 @@
+{
+  meta: {
+    req: {
+      url: '/emp/leave',
+      headers: {
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3Vyc2UiOiJuc2QxMDQiLCJpYXQiOjE3MDY2NDQ3MjcsImV4cCI6MTcwNjY0NDgyN30.yrjcJbBrXDztXHJuQYUNYXmm4VfWlXPClS8oRndXDaU',
+        'content-type': 'application/json',
+        'user-agent': 'PostmanRuntime/7.36.1',
+        accept: '*/*',
+        'postman-token': '782ac66e-23d5-4ff1-8d6c-acae5f3deed8',
+        host: 'localhost:4500',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '8'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/emp/leave',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 5
+  },
+  level: '\x1B[31merror\x1B[39m',
+  message: 'HTTP GET /emp/leave'
+}
+{
+  meta: {
+    req: {
+      url: '/emp/leave',
+      headers: {
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3Vyc2UiOiJuc2QxMDQiLCJpYXQiOjE3MDY2NDQ3MjcsImV4cCI6MTcwNjY0NDgyN30.yrjcJbBrXDztXHJuQYUNYXmm4VfWlXPClS8oRndXDaU',
+        'content-type': 'application/json',
+        'user-agent': 'PostmanRuntime/7.36.1',
+        accept: '*/*',
+        'postman-token': '4574676c-c6b0-4633-a489-40b80398895a',
+        host: 'localhost:4500',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '8'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/emp/leave',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 0
+  },
+  level: '\x1B[31merror\x1B[39m',
+  message: 'HTTP GET /emp/leave'
+}
+{
+  meta: {
+    req: {
+      url: '/emp/leave',
+      headers: {
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3Vyc2UiOiJuc2QxMDQiLCJpYXQiOjE3MDY2NDQ3MjcsImV4cCI6MTcwNjY0NDgyN30.yrjcJbBrXDztXHJuQYUNYXmm4VfWlXPClS8oRndXDaU',
+        'content-type': 'application/json',
+        'user-agent': 'PostmanRuntime/7.36.1',
+        accept: '*/*',
+        'postman-token': '2d740140-e50d-4213-a1ed-59becee1fb61',
+        host: 'localhost:4500',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '8'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/emp/leave',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 0
+  },
+  level: '\x1B[31merror\x1B[39m',
+  message: 'HTTP GET /emp/leave'
+}

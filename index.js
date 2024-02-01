@@ -11,26 +11,26 @@ app.use(express.json());
 
 app.use(expressWinston.logger({
     transports:[
-        new transports.Console({
-            json:true,
-            colorize:true,
-            level:"error"
-        })
+        // new transports.Console({
+        //     json:true,
+        //     colorize:true,
+        //     level:"error"
+        // })
         // new transports.File({
         //     json:true,
-        //     level:"warn",
+        //     level:"silly",
         //     filename:"warnninglogs.log"
         // })
-        // new transports.MongoDB({
-        //     json: true,
-        //     level: "warn",
-        //     db: "mongodb+srv://anjalipandey:anjalipandey@cluster0.oumymuv.mongodb.net/?retryWrites=true&w=majority",
-        //     collection: "winstonlog",
-        //     options: {
-        //         useUnifiedTopology: true, 
-        //     }
+        new transports.MongoDB({
+            json: true,
+            level: "silly",
+            db: "mongodb+srv://anjalipandey:anjalipandey@cluster0.oumymuv.mongodb.net/winston?retryWrites=true&w=majority",
+            collection: "winstonError",
+            options: {
+                useUnifiedTopology: true, 
+            }
         
-        //  })
+         })
 
     ],
     format:format.combine(
