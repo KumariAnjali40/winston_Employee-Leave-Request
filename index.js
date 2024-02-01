@@ -1,4 +1,7 @@
 const express=require('express');
+const {transports,format}=require('winston');
+const expressWinston=require('express-winston');
+require('winston-mongodb');
 const { connection } = require("./db");
 const router=require('./routes/user.routes');
 const leaveRouter=require('./routes/leaveRequest');
@@ -6,13 +9,42 @@ const app=express();
 app.use(express.json());
 
 
+app.use(expressWinston.logger({
+    transports:[
+        new transports.Console({
+            json:true,
+            colorize:true,
+            level:"error"
+        })
+        // new transports.File({
+        //     json:true,
+        //     level:"warn",
+        //     filename:"warnninglogs.log"
+        // })
+        // new transports.MongoDB({
+        //     json: true,
+        //     level: "warn",
+        //     db: "mongodb+srv://anjalipandey:anjalipandey@cluster0.oumymuv.mongodb.net/?retryWrites=true&w=majority",
+        //     collection: "winstonlog",
+        //     options: {
+        //         useUnifiedTopology: true, 
+        //     }
+        
+        //  })
+
+    ],
+    format:format.combine(
+        format.colorize(),
+        format.json(),
+        format.prettyPrint(),
+    ),
+    msg:"HTTP {{req.method}} {{req.url}}",
+    statusLevels:true
+}))
+
+
 app.use('/emp',router);
 app.use('/leave',leaveRouter);
-
-
-
-
-
 
 app.listen(4500,async()=>{
     try{
